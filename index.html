@@ -11,14 +11,22 @@
   <body>
     <div id="content"></div>
     <script type="text/jsx">
+
         var MyComponent = React.createClass({
           render: function() {
               return(
-              <h2>Diandra Whittick</h2>
+              <h2>{this.props.user} likes to eat {this.props.food}</h2>
             );
           }
         });
-        React.render(<MyComponent/>, document.getElementById('content'));
+        /*1. Components must have begin with Capital Letter
+        2. To display multiple components place within a div and render
+        3. Use curly braces to access properties, then use this.props and then the name of the property*/
+        React.render(<div class="">
+          <MyComponent user = "Diandra" food="Bacon"/>
+          <MyComponent user = "Diandra"food="Tuna"/>
+          <MyComponent  user = "Diandra"  food = "Pizza"/>
+        </div>, document.getElementById('content'));
     </script>
   </body>
 </html>
