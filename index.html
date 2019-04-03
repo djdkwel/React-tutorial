@@ -15,17 +15,21 @@
         var MyComponent = React.createClass({
           render: function() {
               return(
-              <h2>{this.props.user} likes to eat {this.props.food}</h2>
+              <div >
+                  <h3>{this.props.user}</h3>
+                  <p>{this.props.children}</p>
+              </div>
             );
           }
         });
         /*1. Components must have begin with Capital Letter
         2. To display multiple components place within a div and render
-        3. Use curly braces to access properties, then use this.props and then the name of the property*/
+        3. Use curly braces to access properties, then use this.props and then the name of the property
+        4.Anything displayed between the component tags is a child*/
         React.render(<div class="">
-          <MyComponent user = "Diandra" food="Bacon"/>
-          <MyComponent user = "Diandra"food="Tuna"/>
-          <MyComponent  user = "Diandra"  food = "Pizza"/>
+          <MyComponent user = "Diandra"> This girl is awesome</MyComponent>
+          <MyComponent user = "Gemma"> She's pretty cool</MyComponent>
+
         </div>, document.getElementById('content'));
     </script>
   </body>
