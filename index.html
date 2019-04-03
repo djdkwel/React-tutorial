@@ -9,15 +9,16 @@
   </head>
 
   <body>
+    <div id="content"></div>
     <script type="text/jsx">
-        var myComponent = React.createClass({
-          render: function(){
-            return (
-            <<h2>Diandra Whittick</h2>
+        var MyComponent = React.createClass({
+          render: function() {
+              return(
+              <h2>Diandra Whittick</h2>
             );
           }
         });
-        React.render(<myComponent/>, document)
+        React.render(<MyComponent/>, document.getElementById('content'));
     </script>
   </body>
 </html>
